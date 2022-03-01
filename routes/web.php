@@ -19,4 +19,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/ver/posts/{user}' , [App\Http\Controllers\PostController::Class, 'index']);
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Models\Post;
 
 class PostsSeeder extends Seeder
 {
@@ -14,9 +15,30 @@ class PostsSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('posts')->insert([
-            'content' => "Ejemplo",
-            'user_id' => "1",        
-        ]);
+        $p = new Post();
+        $p->content = "Ejemplo de post 1";
+        $p->user_id = 1;
+        $p->save();
+
+        $p = new Post();
+        $p->content = "Ejemplo de post 2";
+        $p->user_id = 1;
+        $p->save();
+
+        $p = new Post();
+        $p->content = "Ejemplo de post 3";
+        $p->user_id = 1;
+        $p->save();
+
+        $p = new Post();
+        $p->content = "Ejemplo de post 4";
+        $p->user_id = 2;
+        $p->save();
+
+        $p = new Post();
+        $p->content = "Ejemplo de post 2";
+        $p->user_id = 2;
+        $p->save();
+
     }
 }
