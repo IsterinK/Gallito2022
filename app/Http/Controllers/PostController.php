@@ -70,7 +70,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-
+        return view('posts.edit', compact('post'));
     }
 
     /**
@@ -80,9 +80,12 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(PostCreateRequest $request, Post $post)
     {
-        //
+        $post->fill($request->input());
+        $post->save();
+
+        return redirect(route('user.posts', $post->user_id));
     }
 
     /**

@@ -16,10 +16,7 @@
 
         {!! Form::open(['route' => 'posts.store', 'method'=>'post']) !!}
             <form>
-                <div class="mb-3">
-                    <label for="content" class="form-label">Contenido</label>
-                    {!! Form::textarea('content', '' , ['class' => "form-control", 'rows' => 3]) !!}
-                </div>
+                @include('posts.subview-posts-fields')
                 <button type="submit" class="btn btn-primary">Crear</button>
             </form>
         {!! Form::close() !!}
