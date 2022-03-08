@@ -19,7 +19,7 @@ class PostController extends Controller
     {
         $posts = $user->posts()
                     ->orderBy('created_at', 'desc')
-                    ->simplePaginate(2);
+                    ->simplePaginate(4);
         return view('posts.index', compact('posts', 'user'));
     }
 
@@ -56,10 +56,7 @@ class PostController extends Controller
      */
     public function show(User $user)
     {
-        $posts = $user->posts()
-                    ->orderBy('created_at', 'desc')
-                    ->simplePaginate(2);
-        return view('posts.index', compact('posts', 'user'));
+        //
     }
 
     /**
@@ -96,6 +93,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return redirect(route('user.posts', $post->user_id));
     }
 }
