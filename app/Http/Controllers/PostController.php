@@ -17,9 +17,6 @@ class PostController extends Controller
      */
     public function index(User $user)
     {
-        /* $posts = Post::where('user_id', $user->id)
-                            ->orderBy('created_at', 'desc')
-                            ->get(); */
         $posts = $user->posts()
                     ->orderBy('created_at', 'desc')
                     ->simplePaginate(2);
@@ -38,7 +35,6 @@ class PostController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
