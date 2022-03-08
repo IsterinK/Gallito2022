@@ -1,22 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
+<div class="container">
+    <h4>Usuarios registrados</h4>
+
+    @forelse ($users as $user)
+        @include('users.subview-user')
+    @empty
+        <div class="alert alert-info">
+            <h5>No hay usuarios registrados en la plataforma</h5>
         </div>
-    </div>
+    @endforelse
 </div>
+
 @endsection
