@@ -3,12 +3,10 @@
 @section('content')
 
 <div class="container">
-    <h4>Usuarios registrados</h4>
-
-    @forelse ($users as $user)
-        @include('users.subview-user')
+    @forelse ($posts as $post)
+        @include('posts.index')
     @empty
-        <div class="alert alert-info">
+        <div class="alert alert-danger">
             <h5>No hay usuarios registrados en la plataforma</h5>
         </div>
     @endforelse

@@ -1,43 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+@extends('layouts.app')
 
-    <title>Welcome</title>
-
-    <style>
-        body{
-            background-color: #111111;
-            color: #fff;
-        }
-    </style>
-</head>
-<body>
-    <div class="row justify-content-center">
-        <div class="container">
-            <div class="card #9e9e9e grey">
-              <div class="card-image">
-                    <img src="https://weblogue.net/wp-content/uploads/2021/02/How-to-Log-Out-of-Twitter-On-All-Devices-1280x720.jpg">
-                <span class="card-title">
-                    Bienvenido a Gallito</span>
-              </div>
-              <div class="card-content" style="color:black">
-                <p>Un lugar simple y especial para compartir tus ideas.</p>
-              </div>
-              <div class="card-action">
-                  <center>
-                    <a class="waves-effect waves-light btn-large #212121 grey darken-4" href="">Log In</a>
-                    <a class="waves-effect waves-light btn-large #212121 grey darken-4" href="">Sign Up</a>
-                  </center>
-              </div>
+@section('content')
+    <div class="container">
+        <div class="card mb-3">
+            <center>
+                <img src="https://st2.depositphotos.com/4257363/10336/v/600/depositphotos_103360876-stock-illustration-abstract-vector-rooster-with-red.jpg" width="150">
+            </center>
+            <div class="card-body">
+              <center>
+                <h1 class="card-title" style="color:black">Bienvenido a Gallito</h1>
+                <p class="card-text" style="color:black">El lugar perfecto para compartir tus pensamientos con diferentes usuarios al rededor del mundo</p>
+              </center>
             </div>
           </div>
+
+        @forelse ($users as $user)
+            @include('users.subview-user')
+        @empty
+            <div class="alert alert-info">
+                <h5>No hay usuarios registrados en la plataforma</h5>
+            </div>
+        @endforelse
     </div>
-</body>
-</html>
+@endsection

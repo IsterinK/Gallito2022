@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')}
+@section('content')
     <div class="container">
         <h1>Crear publicación</h1>
 
@@ -17,7 +17,7 @@
         {!! Form::open(['route' => 'posts.store', 'method'=>'post']) !!}
             <form>
                 @include('posts.subview-posts-fields')
-                <button type="submit" class="btn btn-primary">Crear</button>
+                <button type="submit" class="btn btn-light">Crear</button>
             </form>
         {!! Form::close() !!}
     </div>

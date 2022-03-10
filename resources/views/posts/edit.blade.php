@@ -7,7 +7,7 @@
         {!! Form::model($post, ['method' => 'PUT','route' => ['posts.update', $post->id]]) !!}
             <form>
                 @include('posts.subview-posts-fields')
-                <button type="submit" class="btn btn-primary">Editar</button>
+                <button type="submit" class="btn btn-light">Editar</button>
             </form>
         {!! Form::close() !!}
     </div>

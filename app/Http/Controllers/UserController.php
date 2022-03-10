@@ -15,10 +15,8 @@ class UserController extends Controller
      */
     public function index(User $user, Post $pots)
     {
-        $posts = $user->posts()
-                    ->orderBy('created_at', 'desc')
-                    ->simplePaginate(10);
-        return view('posts.index', compact('posts', 'user'));
+        $users = User::All();
+        return view('welcome', compact('users'));
     }
 
     /**
