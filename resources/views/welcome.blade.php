@@ -9,7 +9,7 @@
             <div class="card-body">
               <center>
                 <h1 class="card-title" style="color:black">Bienvenido a Gallito</h1>
-                <p class="card-text" style="color:black">El lugar perfecto para compartir tus pensamientos con diferentes usuarios al rededor del mundo</p>
+                <p class="card-text" style="color:black">El lugar perfecto para compartir tus pensamientos con diferentes usuarios al rededor del mundo.</p>
               </center>
             </div>
           </div>

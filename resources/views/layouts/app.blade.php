@@ -29,11 +29,11 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar navbar-dark bg-dark shadow-sm">
             <div class="container">
 
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="https://st2.depositphotos.com/4257363/10336/v/600/depositphotos_103360876-stock-illustration-abstract-vector-rooster-with-red.jpg" width="50" height="50">
+                    <img src="https://lh3.googleusercontent.com/fife/AAWUweX7o5qeYSQI0eBpEIFRYqzzIwtq6Ygyj82i0JrCuvognFSrYdJXEsGTd8zzqsqtzeaWxGC3b8hkrmhan44AkapgWrlxBNogeIrb9DTeYjTwpJVV6RH8YH7ZXUgeowOYYPDC1CJPR24tyOuRm47q-23S-0Ed0-7L1XKbNwjBsfRxU9S4DjFpexbgEcvE4meYO_Z0i7s5NdOqcH02Vdtq_j8in5n_nbqZyJz8ZRVhFZyEKFHY6c373WIJ3E-zqJ2W6x4iIKDwE9yiunANH3dOshmHm-TD49t4aehOf9Vfkt1Q1smEJQF3wW8owjX_wgA6B1TAEe_nztrBspS8LuT2OPUszdLbHKr-zazTmqcF2WoJdHB3L0w9GwdKf07havWPJGpM7gNwCVP9rvWFCLiEy14-xxL3JwMQMWB3Z50h2UU9zhpDg0jIHITDkxH56xm2De98_fk1QgDIiuPVGaZCmMyG6GTdcwauWP7J6zT91tnR0-Ek489F117V2kgKGnisqQwg5iqnv4zyJwOncvhS1NuCj_tHAWE3KmwKrdAekKcuoa4ai_8uNV8EuB5vLjbLtC3g_ZIvMHL1IhetseiOs07ZAFGhB90uQLXFA6teaQnmUt6cedLITcRarXAGBTQdAZUMM8sqtJJrDGcFaBmufccoN4vxWBbs0alX_0WFo9s8Z_vgdWANA9Dlb_DsEdws6RNo7JoZUY1Ky4HeVpyA1EhZzrFPoEq7M0E=w1868-h903" width="60" height="60">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
