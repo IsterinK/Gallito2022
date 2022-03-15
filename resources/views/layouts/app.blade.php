@@ -104,6 +104,34 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        </div>
     </div>
+
+
+    <footer class="text-center text-lg-start bg-dark text-muted">
+        <section class="">
+            <div class="container text-center text-md-start mt-4">
+                <div class="row mt-1">
+                    <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4">
+                        <center>
+                            <br>
+                            <p>
+                                Red social dedicada a las personas pertenecientes a la UAM.
+                            </p>
+
+                            <p>
+                                Desarrollado por: Manuel Gustavo Patiño Calderon, Esteban Patiño Gaviria
+                            </p>
+
+                            <p>
+                                2022
+                            </p>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
