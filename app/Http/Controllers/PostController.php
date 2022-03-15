@@ -67,7 +67,12 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('posts.edit', compact('post'));
+        if(($post->user_id) == Auth::id()){
+            return view('posts.edit', compact('post'));
+        }else{
+            return redirect(route('welcome'));
+        }
+
     }
 
     /**
@@ -93,7 +98,11 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        $post->delete();
-        return redirect(route('user.posts', $post->user_id));
+        if(($post->user_id) == Auth::id()){
+            $post->delete();
+            return redirect(route('user.posts', $post->user_id));
+        }else{
+            return redirect(route('home', $post->user_id));
+        }
     }
 }
