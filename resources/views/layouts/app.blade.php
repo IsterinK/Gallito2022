@@ -76,7 +76,6 @@
                                         Crear publicación
                                     </a>
                                 </div>
-
                             </li>
 
                             <li class="nav-item dropdown">
